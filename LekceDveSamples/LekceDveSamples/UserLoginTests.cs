@@ -4,14 +4,14 @@ using OpenQA.Selenium.Chrome;
 
 namespace LekceDveSamples
 {
-    public class PrihlaseniUzivateleTests
+    public class UserLoginTests
     {
         public WebDriver webDriver = new ChromeDriver();
         string baseUrl = "";
 
 
         [Test]
-        public void GivenPrihlasovaciStrankaJeZobrazena_WhenUzivatelSePrihlasiValidnimiUdaji_ThenUzivatelJePrihlasen()
+        public void GivenLoginPageIsLoaded_WhenUserLoginWithValidCredentials_ThenIsLoggedIn()
         {
             webDriver.Navigate().GoToUrl(baseUrl);
             webDriver.FindElement(By.Id("LoginField")).SendKeys("Ucastnice");
@@ -22,7 +22,7 @@ namespace LekceDveSamples
         }
 
         [Test]
-        public void PlatnyUzivatelSeMuzePrihlasit()
+        public void ValidUserCanLoginIn()
         {
             webDriver.Navigate().GoToUrl(baseUrl);
             webDriver.FindElement(By.Id("LoginField")).SendKeys("Ucastnice");
