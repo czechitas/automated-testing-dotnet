@@ -2,7 +2,7 @@ using FluentAssertions;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace LekceDveSamples
+namespace LessonTwoSamples
 {
     public class UserLoginTests
     {

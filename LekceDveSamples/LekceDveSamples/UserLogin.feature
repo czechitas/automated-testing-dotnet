@@ -2,9 +2,9 @@
 	To show another possible naming options
 
 
-Scenario: Platny uzivatel se muze prihlasit
+Scenario: Valid user can login
 	Given user open applicaiton on login page
-		When user fill valid username
-		When user fill valid password
-		And user click on login
+		When user fills valid username
+		When user fills valid password
+		And user clicks on login
 	Then validate that login was successful

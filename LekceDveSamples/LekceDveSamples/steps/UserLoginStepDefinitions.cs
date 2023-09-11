@@ -1,10 +1,9 @@
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
-using System;
 using TechTalk.SpecFlow;
 using FluentAssertions;
 
-namespace LekceDveSamples.steps
+namespace LessonTwoSamples.steps
 {
     [Binding]
     public class UserLoginStepDefinitions
@@ -18,20 +17,20 @@ namespace LekceDveSamples.steps
             webDriver.Navigate().GoToUrl(baseUrl);
         }
 
-        [When(@"user fill valid username")]
-        public void WhenUserFillValidUsername()
+        [When(@"user fills valid username")]
+        public void WhenUserFillsValidUsername()
         {
             webDriver.FindElement(By.Id("LoginField")).SendKeys("Ucastnice");
         }
 
-        [When(@"user fill valid password")]
-        public void WhenUserFillValidPassword()
+        [When(@"user fills valid password")]
+        public void WhenUserFillsValidPassword()
         {
             webDriver.FindElement(By.Id("PasswordField")).SendKeys("Heslo");
         }
 
-        [When(@"user click on login")]
-        public void WhenUserClickOnLogin()
+        [When(@"user clicks on login")]
+        public void WhenUserClicksOnLogin()
         {
             webDriver.FindElement(By.Id("OkButton")).Click();
         }
